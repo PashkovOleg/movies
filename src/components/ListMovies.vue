@@ -101,7 +101,9 @@
             </v-menu>
           </v-col>
           <v-col class="d-flex button">
-            <v-btn color="#2196f3" @click="clearFilters">Clear all filters</v-btn>
+            <v-btn color="#2196f3" @click="clearFilters"
+              >Clear all filters</v-btn
+            >
           </v-col>
         </v-row>
       </div>
@@ -209,6 +211,7 @@ export default {
       this.$set(this, "filters", {});
     },
     parseDate(date) {
+      /* необходимо сделать проверку на формат даты */
       if (!date) return null;
       if (!date.includes("/")) return;
       const [month, day, year] = date.split("/");

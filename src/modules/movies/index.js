@@ -45,12 +45,12 @@ export default {
       let moviesList = state.movies;
       if (title) {
         moviesList = moviesList.filter(item =>
-          item.title.toLowerCase().includes(title)
+          item.title.toLowerCase().includes(title.toLowerCase())
         );
       }
       if (overview) {
         moviesList = moviesList.filter(item =>
-          item.overview.toLowerCase().includes(overview)
+          item.overview.toLowerCase().includes(overview.toLowerCase())
         );
       }
       if (language) {
