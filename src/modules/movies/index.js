@@ -29,11 +29,7 @@ export default {
     getMoviesOnPage: state => {
       let index = state.currentPage * 20 - 20;
       const end = state.currentPage * 20;
-      let arr = [];
-      while (index < end) {
-        arr.push(state.movies[index]);
-        index++;
-      }
+      const arr = state.movies.slice(index, end);
       return arr;
     },
     getFilteredMovies: state => {
